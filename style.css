@@ -171,6 +171,14 @@ input:focus {
     background-color: inherit;
     width: 50%;
   }
+
+  .containerUp {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    margin-top: -10%;
+  }
   
   /* The circles on the timeline */
   .container::after {
