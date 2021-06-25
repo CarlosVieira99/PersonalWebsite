@@ -1,796 +1,318 @@
-<!DOCTYPE html>
-<html lang="en">
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5, .mySlides6  {display: none}
+.mySlides1:first-child, .mySlides2:first-child, .mySlides3:first-child,
+ .mySlides4:first-child, .mySlides5:first-child, .mySlides6:first-child{display: block}
+img {vertical-align: middle;}
 
-<head>
-<title>Carlos Vieira Personal Website</title>
-<link rel="icon" href="./Img/FotoLink.jpg" type="image/icon type">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="https://kit.fontawesome.com/71f8b51dda.js" crossorigin="anonymous"></script>
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
 
-<!-- Bootstrap -->
-<!-- Latest compiled and minified CSS -->
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
-<!-- jQuery library -->
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
-<!-- Popper JS -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> -->
-<!-- Latest compiled JavaScript -->
-<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif;}
 
-<!-- W3.CSS Web -->
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="style.css">
-<!-- <link rel="shortcut icon" href="Img/FotoLink.jpg"> -->
-<!-- W3.CSS Local -->
-<!-- <link rel="stylesheet" href="w3.css"> -->
-<!-- Necessário? -->
-<!-- <script src="https://www.w3schools.com/lib/w3.js"></script> -->
+p {
+  text-align: justify;
+}
 
-<!-- Altium 365-->
-<!-- <script src="https://viewer.altium.com/client/static/js/embed.js"></script> -->
+.subtitulo:hover{
+    color: white;
+    background-color: black;
+}
 
-<script src="script.js" crossorigin="anonymous"></script>
-</head>
-<body class="w3-content w3-light-gray" style="max-width:1600px">
+.email:hover{
+    color: black !important;
+    background-color: white !important;
+}
 
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:200px;" id="mySidebar"><br>
-    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
-        <i class="fa fa-remove"></i>
-      </a>
-    <div class="w3-container">
+h5 {
+    color:rgb(255, 138, 0)
+}
 
-    <div class="containerOverlay">
-        <img src="./Img/FotoLink.jpg" style="width:100%;" class="w3-round image" alt="Carlos Vieira">
-        <div class="overlay">
-          <div class="textOverlay">Hi! <br> Nice to meet you! :D</div>
-        </div>
-      </div>
-      <h4><b>Carlos Vieira</b> (22y)</h4>
-        <p class="w3-text-grey">Electrical and Computer Engineer</p>
-  </div>
-  <div class="w3-bar-block">
-    <a href="#tech" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-black w3-hover-text-white"><i class="fa fa-project-diagram fa-fw w3-margin-right"></i>TECH SKILLS</a>
-    <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-black w3-hover-text-white"><i class="fa fa-bolt fa-fw w3-margin-right"></i>PORTFOLIO</a>
-    <a href="#education" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-black w3-hover-text-white"><i class="fa fa-user-graduate fa-fw w3-margin-right"></i>EDUCATION</a>
-    <a href="#extra" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-black w3-hover-text-white"><i class="fa fa-hands-helping fa-fw w3-margin-right"></i>EXTRA ACTIVITIES</a>
-    <a href="#language" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-black w3-hover-text-white"><i class="fa fa-language fa-fw w3-margin-right"></i>LANGUAGES</a>
-    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-black w3-hover-text-white"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT ME</a> 
-    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-black w3-hover-text-white"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT ME</a>
-    <a href="./Docs/Curr_culo_Atual.pdf" download="CarlosVieiraCV.pdf" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-black w3-hover-text-white"><i class="fa fa-download fa-fw w3-margin-right"></i>CURRICULUM</a>
-    <a href="https://www.linkedin.com/in/carlosvieira99/" target="_blank" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-black w3-hover-text-white"><i class="fa fa-linkedin fa-fw w3-margin-right"></i>LINKEDIN</a>
-    <a href="https://github.com/CarlosVieira99" target="_blank" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-black w3-hover-text-white"><i class="fa fa-github fa-fw w3-margin-right"></i>GITHUB</a>
-  </div>
-  <!-- <div class="w3-panel w3-large">
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-    <i class="fa fa-github w3-hover-opacity"></i>
-    <i class="fa fa-download"></i> Download CV
-  </div> -->
-</nav>
+input:focus {
+    background-color: lightblue;
+  }
 
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
 
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:200px">
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
 
-  <!-- Header -->
-  <header class="w3-white">
-    <a href="https://www.isep.ipp.pt/new/viewnew/6185" target="_blank"><img src="./Img/FotoLink.jpg" style="width:85px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
-    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.containerOverlay {
+    position: relative;
+    width: 100%;
+  }
+  
+  .image {
+    display: block;
+    width: 100%;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+  }
+  
+  .containerOverlay:hover .overlay {
+    opacity: 1;
+  }
+  
+  .textOverlay {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+
+
+  /* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  /* Container around content */
+  .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+
+  .containerUp {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    margin-top: -10%;
+  }
+  
+  /* The circles on the timeline */
+  .container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  /* The circles on the timeline */
+  .containerUp::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* Place the container to the left */
+  .left {
+    left: 0;
+  }
+  
+  /* Place the container to the right */
+  .right {
+    left: 50%;
+  }
+  
+  /* Add arrows to the left container (pointing right) */
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -16px;
+  }
+  
+  /* The actual content */
+  .content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+  }
+  
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+  @media screen and (max-width: 600px) {
+    /* Place the timelime to the left */
+    .timeline::after {
+    left: 31px;
+    }
     
-   <!-- <div class="w3-section w3-bottombar w3-padding-16">
-      <span class="w3-margin-right">Filter:</span> 
-      <button class="w3-button w3-black">ALL</button>
-      <button class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right"></i>Design</button>
-      <button class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Photos</button>
-      <button class="w3-button w3-white w3-hide-small"><i class="fa fa-map-pin w3-margin-right"></i>Art</button>
-    </div> -->
-  </header>
-
-      <div class="w3-container w3-white w3-center">
-      <video width="50%" alt="Please wait some seconds for the intro video to load..." style="margin-top: 20px; margin-bottom: 20px;" autoplay muted>
-        <source src="./Img/intro.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-      </video> 
-    </div>
-
-    <!-- Areas of Expertise-->
-    <div class="w3-container" id="tech" style="margin-bottom: 0%; padding-bottom: 0%;">
-    <div class="w3-panel w3-center w3-border w3-border-dark-grey w3-justify subtitulo" style="margin-bottom: 0%; padding-bottom: 0%;">
-        <h4><i class="fas fa-project-diagram fa-fw w3-margin-right w3-center w3-justify"></i><strong>Areas of Expertise & Technical Skills</strong></h4>
-        </div>  
+    /* Full-width containers */
+    .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    }
     
-        <div class="w3-row-padding w3-justify" style="margin-bottom: 0%; padding-bottom: 0%;">
-        <div class="w3-third w3-container w3-margin-bottom w3-justify">
-            <h5><i class="fa fa-microchip fa-fw w3-margin-right" style="text-align: justify;"></i><b>Digital Electronics</b></h5>
-            <p style="text-align: justify;">Having designed and produced 4 different PCB projects, this is my most comfortable area of knowledge. 
-            I have some experience programming several microcontrollers in C like the ATmega328P, the STM32F103 and the ESP32. 
-            Consequently I have also developed a reasonable amount of libraries for sensors and drivers to be used with this microcontrollers.</p> 
-        </div>
-        <div class="w3-third w3-container w3-margin-bottom">
-            <h5><i class="fa fa-robot fa-fw w3-margin-right"></i><b>Robotics & Control</b></h5>
-            <p style="text-align: justify;">This is my current field of study. I have been developing simulations and real world operations using ROS (Robot Operation System).
-            Several fields of study are included in here, like Image Processing, System Control, Project Management, and others.
-            I'm currently working along the UNEXUP project team, an underwater robot for flooded mines.</p>
-        </div>
-        <div class="w3-third w3-container w3-justify" style="margin-bottom: 0%; padding-bottom: 0%;">
-        <h5 ><i class="fa fa-database fa-fw w3-margin-right"></i><b> Web Development</b></h5>
-        <p style="text-align: justify;">Mostly self-taught (or online taught) at this field, where I have gained some interest due to the limitless possibilities of creation and innovation
-           using websites and general networks. A proof of this self interest is the development of this website, where I had to develop skills around HTML, CSS, JavaScript, PHP and SQL.
-           IoT applications are also appealing. </p>
-        </div>
-        </div>
+    /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+    }
+  
+    /* Make sure all circles are at the same spot */
+    .left::after, .right::after {
+    left: 15px;
+    }
     
-        <div class="w3-row-padding" style="margin-top: 0%; padding-top: 0%;">
-            <div class="w3-third w3-container w3-margin-bottom" style="margin-top: 0%; padding-top: 0%;">
-                <h5><i class="fa fa-code fa-fw w3-margin-right"></i><b>Apps & UI</b></h5>
-                <p style="text-align: justify;">In love with Python since I started programming it, it is so universal and flexible that you can do practically anything with it. 
-                This motivated me to learn more about UI (User Interface) with the help of QT Designer and also the development of 3D real-time simulations
-                using VTK (Visual ToolKit) and mathematical analysis with MatPlotLib and Numpy.</p>
-                </div>
-            <div class="w3-third w3-container w3-margin-bottom">
-                <h5><i class="fa fa-industry fa-fw w3-margin-right"></i><b>Industrial Automation</b></h5>
-                <p style="text-align: justify;">A recent interest in my life after having the opportunity to automate some systems at ISEP.
-                I had the chance to program Siemens and Schneider PLC's, using respectively, the software SIMATIC Step 7 and SoMachine.
-                For this I used the LADDER programming language. One day I hope to build a PLC of my own for academic purposes.</p>
-            </div>
-            <div class="w3-third w3-container w3-margin-bottom">
-                <h5 style="margin-bottom: 0%; padding-bottom: 0%;"><i class="fa fa-cog fa-fw w3-margin-right"></i><b>CAD Design</b></h5>
-                <p style="text-align: justify;">After acquiring a 3D printer, I challenged myself to create and implement physical structures to help creating solid and robust products.
-                During this process I developed some skills in CAD drawing and general knowledge about 3D printers and addictive manufacturing.
-                In the beginning of last year I had printed around 500 face shields for health care professionals.</p>
-            </div>
-            </div>
-            </div>
-        
-        <!-- Technical Skills -->
-        <div class="w3-container w3-center">
-        
-        <div class="w3-row-padding w3-padding-16 w3-pad w3-center " style="margin-inline: 10%;">
-            <div class="w3-col m6">
-                <p>PCB Design</p>
-                <div class="w3-grey w3-round-large" style="margin-right: 5%;">
-                  <div class="w3-container w3-orange w3-text-light-grey w3-padding w3-center w3-round-large" style="width:95%;"><b>KiCAD & Altium Designer</b></div>
-                </div>
-                <p>Mathematical Analysis</p>
-                <div class="w3-grey w3-round-large" style="margin-right: 5%;">
-                  <div class="w3-container w3-orange w3-text-light-grey w3-padding w3-center w3-round-large" style="width:95%"><b>Matlab/Octave & Python</b></div>
-                </div>
-                <p>Image Processing</p>
-                <div class="w3-grey w3-round-large" style="margin-right: 5%;">
-                  <div class="w3-container w3-orange w3-text-light-grey w3-padding w3-center w3-round-large" style="width:80%"><b>Matlab/Octave & Python</b></div>
-                </div>
-            </div>
-            <div class="w3-col m6">
-                <p>Microcontrollers</p>
-                <div class="w3-grey w3-round-large" style="margin-left: 5%;">
-                  <div class="w3-container w3-orange w3-text-light-grey w3-padding w3-center w3-round-large" style="width:95%"><b>Atmel Studio, CubeIDE & Arduino</b></div>
-                </div>
-                <p>Sensors & Actuators</p>
-                <div class="w3-grey w3-round-large" style="margin-left: 5%;">
-                  <div class="w3-container w3-orange w3-text-light-grey w3-padding w3-center w3-round-large" style="width:90%"><b>IMU, LiDAR, Servo & Stepper Motors</b></div>
-                </div>
-                <p>Report Writing</p>
-                <div class="w3-grey w3-round-large" style="margin-left: 5%;">
-                  <div class="w3-container w3-orange w3-text-light-grey w3-padding w3-center w3-round-large" style="width:90%"><b>LaTeX</b></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <h3 class="w3-center">Commonly used Software and Tools:</h3>
-    <div class="section w3-center">
-        <img src="./Img/software.png" style="width:70%" class="w3-center">
-    </div>
+    /* Make all right containers behave like the left ones */
+    .right {
+    left: 0%;
+    }
+  }
 
 
-        <hr>
-    
 
- <!-- About Me -->
- <div class="w3-container" id="portfolio">
- <div class="w3-panel w3-center w3-border w3-border-dark-grey subtitulo">
-    <h4><i class="fa fa-bolt fa-fw w3-margin-right"></i><strong>Projects Portfolio</strong></h4>
-    </div> </div>
+
+  .container2 {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+  }
   
-  <!-- First Photo Grid-->
-  <div class="w3-row-padding">
-       <!-- Next Picture -->
-     <div class="w3-quarter w3-container w3-margin-bottom" style="width: 25%; margin-inline: 4%;">
-        <!-- Slideshow container -->
-     <div class="slideshow-container">
-     <!-- Full-width images with number and caption text -->
-     <div class="mySlides5">
-       <div class="numbertext">1 / 6</div>
-       <img src="./Img/nfc2.jpg" style="width:100%">
-     </div>
-     <div class="mySlides5">
-       <div class="numbertext">2 / 6</div>
-       <img src="./Img/nfc3.jpg" style="width:100%">
-     </div>
-     <div class="mySlides5">
-       <div class="numbertext">3 / 6</div>
-       <img src="./Img/nfc4.png" style="width:100%">
-     </div>
-     <div class="mySlides5">
-        <div class="numbertext">4 / 6</div>
-        <img src="./Img/nfc5.png" style="width:100%">
-      </div>
-      <div class="mySlides5">
-        <div class="numbertext">5 / 6</div>
-        <img src="./Img/nfc6.png" style="width:100%">
-      </div>
-      <div class="mySlides5">
-        <div class="numbertext">6 / 6</div>
-        <img src="./Img/nfc7.png" style="width:100%">
-      </div>
-   
-     <!-- Next and previous buttons -->
-     <a class="prev" onclick="plusSlides(-1, 4)">&#10094;</a>
-     <a class="next" onclick="plusSlides(1, 4)">&#10095;</a>
-     </div>
-       <div class="w3-container w3-white w3-hover-black w3-hover-text-white">
-         <p><b>NFC Personal Card with Feedback LED</b></p>
-         <p>Developed within the Link Me Up - 1000 Ideias Project.</p>
-         <div class="w3-panel w3-large">
-            <div class="w3-right" style="display: inline;">
-                Jun 2021
-            </div>
-           </div>  
-     </div>
-     </div>
- 
-      <!-- Next Picture -->
-      <div class="w3-quarter w3-container w3-margin-bottom" style="width: 25%; margin-inline: 4%;">
-        <!-- Slideshow container -->
-     <div class="slideshow-container">
-     <!-- Full-width images with number and caption text -->
-     <div class="mySlides6">
-       <div class="numbertext">1 / 4</div>
-       <img src="./Img/pontoC1.jpg" style="width:100%">
-     </div>
-     <div class="mySlides6">
-       <div class="numbertext">2 / 4</div>
-       <img src="./Img/pontoC2.jpg" style="width:100%">
-     </div>
-     <div class="mySlides6">
-       <div class="numbertext">3 / 4</div>
-       <img src="./Img/pontoC3.jpg" style="width:100%">
-     </div>
-     <div class="mySlides6">
-        <div class="numbertext">4 / 4</div>
-        <img src="./Img/pontoC4.jpg" style="width:100%">
-      </div>
-   
-     <!-- Next and previous buttons -->
-     <a class="prev" onclick="plusSlides(-1, 5)">&#10094;</a>
-     <a class="next" onclick="plusSlides(1, 5)">&#10095;</a>
-     </div>
-       <div class="w3-container w3-white w3-hover-black w3-hover-text-white">
-         <p><b>Fiber Optic Lightning Structure</b></p>
-         <p>Developed within the Link Me Up - 1000 Ideias Project.</p>
-         <div class="w3-panel w3-large">
-            <div class="w3-right" style="display: inline;">
-                Jun 2021
-            </div>
-           </div>  
-     </div>
-     </div>
-
-
-    <div class="w3-quarter w3-container w3-margin-bottom" style="width: 25%; margin-inline: 4%;">
-       <!-- Slideshow container -->
-    <div class="slideshow-container">
-    <!-- Full-width images with number and caption text -->
-    <div class="mySlides1">
-      <div class="numbertext">1 / 5</div>
-      <img src="./Img/colAvoid.jpg" style="width:100%">
-    </div>
-    <div class="mySlides1">
-      <div class="numbertext">2 / 5</div>
-      <img src="./Img/colAvoid3.png" style="width:100%">
-    </div>
-    <div class="mySlides1">
-      <div class="numbertext">3 / 5</div>
-      <img src="./Img/colAvoid2.png" style="width:100%">
-    </div>
-    <div class="mySlides1">
-        <div class="numbertext">4 / 5</div>
-        <img src="./Img/colAvoid4.png" style="width:100%">
-      </div>
-      <div class="mySlides1">
-        <div class="numbertext">5 / 5</div>
-        <img src="./Img/colAvoid1.png" style="width:100%">
-      </div>
+  .container2 img2 {vertical-align: middle;}
   
-    <!-- Next and previous buttons -->
-    <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
-    </div>
-      <div class="w3-container w3-white w3-hover-black w3-hover-text-white">
-        <p><b>Flight Collision Avoidance System for UAVs</b></p>
-        <p>Project developed during the first year of the Masters Degree.
-            The goal was to build a flexible collision avoidance solution to use in big sized UAVs.
-            The project includes: STM32 Microcontroller, LiDAR Sensor, CAN/RS232/RS485 Communication. Powered by 12V.
-        </p>
-        <div class="w3-panel w3-large">
-            <a href="https://www.linkedin.com/posts/carlosvieira99_after-many-sleepless-nights-ive-finally-activity-6780901620772298752-dRuf" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
-            <i class="fa fa-github w3-hover-opacity"></i>
-            <div class="w3-right" style="display: inline;">
-                Feb 2021
-            </div>
-        </div> 
-    </div>
-    </div>
- 
-</div>
-  
-  <!-- Second Photo Grid-->
-  <div class="w3-row-padding">
-
-    <!-- Next Picture -->
-
-    <div class="w3-third w3-container w3-margin-bottom w3-center" style="width: 25%;margin-inline: 4%;">
-        <!-- Slideshow container -->
-     <div class="slideshow-container">
-     <!-- Full-width images with number and caption text -->
-     <div class="mySlides3">
-       <div class="numbertext">1 / 7</div>
-       <img src="./Img/scan1.jpg" style="width:100%">
-     </div>
-     <div class="mySlides3">
-       <div class="numbertext">2 / 7</div>
-       <img src="./Img/scan2.jpg" style="width:100%">
-     </div>
-     <div class="mySlides3">
-       <div class="numbertext">3 / 7</div>
-       <img src="./Img/scan3.jpg" style="width:100%">
-     </div>
-     <div class="mySlides3">
-         <div class="numbertext">4 / 7</div>
-         <img src="./Img/scan4.jpg" style="width:100%">
-       </div>
-       <div class="mySlides3">
-         <div class="numbertext">5 / 7</div>
-         <img src="./Img/scan5.jpg" style="width:100%">
-       </div>
-       <div class="mySlides3">
-        <div class="numbertext">6 / 7</div>
-        <img src="./Img/scan7.jpg" style="width:100%">
-      </div>
-      <div class="mySlides3">
-        <div class="numbertext">7 / 7</div>
-        <img src="./Img/scan7.jpg" style="width:100%">
-      </div>
-   
-     <!-- Next and previous buttons -->
-     <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
-     <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
-     </div>
-       <div class="w3-container w3-white w3-hover-black w3-hover-text-white">
-         <p><b>3D Indoor Mapping: A Real-Time Wireless LiDAR Scanner</b></p>
-         <p>Final year's bachelor project. Development of a 3D Scanner for indoor spaces with applications related to architecture and civil engineering.</p>
-         <div class="w3-panel w3-large">
-             <a href="https://www.linkedin.com/posts/carlosvieira99_in-architecture-the-survey-of-the-construction-activity-6710620531399397376-iOzj" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
-             <i class="fa fa-github w3-hover-opacity"></i>
-             <div class="w3-right" style="display: inline;">
-                Jul 2020
-            </div>
-           </div>  
-     </div>
-     </div>
-
-     <!-- Next Picture -->
-    
-     <div class="w3-third w3-container w3-margin-bottom" style="width: 25%;margin-inline: 4%;">
-        <!-- Slideshow container -->
-     <div class="slideshow-container">
-     <!-- Full-width images with number and caption text -->
-     <div class="mySlides2">
-       <div class="numbertext">1 / 6</div>
-       <img src="./Img/Pikasso1.jpg" style="width:100%">
-     </div>
-     <div class="mySlides2">
-       <div class="numbertext">2 / 6</div>
-       <img src="./Img/Pikasso3.png" style="width:100%">
-     </div>
-     <div class="mySlides2">
-         <div class="numbertext">3 / 6</div>
-         <img src="./Img/Pikasso4.png" style="width:100%">
-       </div>
-       <div class="mySlides2">
-         <div class="numbertext">4 / 6</div>
-         <img src="./Img/Pikasso5.png" style="width:100%">
-       </div>
-       <div class="mySlides2">
-        <div class="numbertext">5 / 6</div>
-        <img src="./Img/Pikasso6.png" style="width:100%">
-      </div>
-      <div class="mySlides2">
-        <div class="numbertext">6 / 6</div>
-        <img src="./Img/Pikasso7.png" style="width:100%">
-      </div>
-   
-     <!-- Next and previous buttons -->
-     <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
-     <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
-     </div>
-       <div class="w3-container w3-white w3-hover-black w3-hover-text-white">
-         <p><b>Pikasso Project: Drawing Plotter</b></p>
-         <p>Bachelor Project. Drawing and writing machine, controlled via Wi-Fi, with a graphical interface on the computer.
-             Developed with C and Python.
-         </p>
-         <div class="w3-panel w3-large">
-             <a href="https://www.linkedin.com/posts/carlosvieira99_pikasso-project-activity-6641110982619914240-70oL" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
-             <i class="fa fa-github w3-hover-opacity"></i>
-             <div class="w3-right" style="display: inline;">
-                Jan 2020
-            </div>
-           </div>  
-     </div>
-     </div>
-
-    <div class="w3-third w3-container w3-margin-bottom w3-center" style="width: 25%; margin-inline: 4%;">
-        <!-- Slideshow container -->
-     <div class="slideshow-container w3-center">
-     <!-- Full-width images with number and caption text -->
-     <div class="mySlides4">
-       <div class="numbertext">1 / 5</div>
-       <img src="./Img/oscila1.jpg" style="width:100%">
-     </div>
-     <div class="mySlides4">
-       <div class="numbertext">2 / 5</div>
-       <img src="./Img/oscila2.png" style="width:100%">
-     </div>
-     <div class="mySlides4">
-       <div class="numbertext">3 / 5</div>
-       <img src="./Img/oscila3.png" style="width:100%">
-     </div>
-     <div class="mySlides4">
-         <div class="numbertext">4 / 5</div>
-         <img src="./Img/oscila4.png" style="width:100%">
-       </div>
-       <div class="mySlides4">
-         <div class="numbertext">5 / 5</div>
-         <img src="./Img/oscila5.png" style="width:100%">
-       </div>
-   
-     <!-- Next and previous buttons -->
-     <a class="prev" onclick="plusSlides(-1, 3)">&#10094;</a>
-     <a class="next" onclick="plusSlides(1, 3)">&#10095;</a>
-     </div>
-       <div class="w3-container w3-white w3-hover-black w3-hover-text-white">
-         <p><b>Automation of Oscillatory Movement Experiments</b></p>
-         <p>Bachelor project. Wi-Fi module with ultrasonic and temperature sensors, connected to the computer, presenting graphical data and results inside a graphical interface. Developed with C and Python.</p>
-         <div class="w3-panel w3-large">
-             <i class="fa fa-github w3-hover-opacity"></i>
-             <div class="w3-right" style="display: inline;">
-                Dec 2019
-            </div>
-           </div>  
-     </div>
-     </div>
-
-
-
-
-
- 
-     <!-- Next Picture -->
-  </div>
-
-  <!-- Pagination
-  <div class="w3-center w3-padding-32">
-    <div class="w3-bar">
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
-      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
-    </div>
-  </div> -->
-
-     <!-- Videos -->
-  <div class="w3-row-padding">
-    <div class="w3-third w3-container w3-margin-bottom w3-center">
-        <iframe width="350" height="250" src="https://www.youtube.com/embed/vrp4sprno1Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="w3-third w3-container w3-margin-bottom w3-center">
-        <iframe width="350" height="250" src="https://www.youtube.com/embed/WNmuCKIpsTQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="w3-third w3-container w3-margin-bottom w3-center">
-        <iframe width="350" height="250" src="https://www.youtube.com/embed/e7DBTXLLdHE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-  </div>
-
-    <!-- Education -->
- <div class="w3-container" id="education">
-    <div class="w3-panel w3-center w3-border w3-border-dark-grey subtitulo">
-       <h4><i class="fa fa-user-graduate fa-fw w3-margin-right"></i><strong>Education & Training</strong></h4>
-       </div> </div>
-
-      <div class="timeline">
-        <div class="container left">
-            <div class="content w3-hover-black w3-hover-text-white">
-              <h3>2021 - Project Link Me Up</h3>
-              <p>
-                This project was based on an international methodology of co-creation, where I had the chance to work for 10 weeks in a real innovative product with multi-disciplinary colleagues.  
-                The project chosen was about the opening of a new theater in the city of Penafiel. The goal was to draw the future, the project, and the strategy of a performing arts center. 
-              </p>
-            </div>
-          </div>  
-        <div class="containerUp right">
-          <div class="content w3-hover-black w3-hover-text-white">
-            <h3>2020 - ISEP Master's in Autonomous Systems</h3>
-            <p>I entered this master course due to my increasing passion for robotics and autonomous systems. 
-                The laboratory is a marvel, with lots of robots and materials that will allow me to pursue my future in this area.
-            </p>
-          </div>
-        </div>
-        <div class="containerUp left">
-            <div class="content w3-hover-black w3-hover-text-white">
-              <h3>2019 - MATLAB Courses</h3>
-              <p>Not long after starting my Erasmus experience, I was proposed to use MATLAB software in most of my classes. Since I have never had contact with this tool before, I had to take some online courses
-                  provided by MATLAB itself. I ended up enjoying working with MATLAB, and did most of the courses they offered, which gave me a lot of skills when it comes to mathematical analysis and image processing, among others.
-              </p>
-            </div>
-          </div>
-        <div class="containerUp right">
-          <div class="content w3-hover-black w3-hover-text-white">
-            <h3>2019 - Erasmus Vilnius, Lithuania</h3>
-            <p>
-                Best decision of my life. I always loved travelling and northeast countries were really appealing to me.
-                So I made the decision, "I'm going to Vilnius", and didn't regret it.
-                I made an absurd amount of new friends from all over Europe and also from outside of it.
-                Speaking in english 24/7 was hard at the beginning but ended up making me a fluent english speaker.
-
-                You can check my final interview about my experience there at <a href="https://vilniustech.lt/about-university/news/student-carlos-silva-it-was-the-best-decision-to-go-on-erasmus-to-vilnius/73472?nid=311002" target="_blank"> <i>vilniustech.lt</i></a>.</p>
-          </div>
-        </div>
-        <div class="containerUp left">
-            <div class="content w3-hover-black w3-hover-text-white">
-              <h3>2018 - Rocket Weekend</h3>
-              <p>This activity was an intensive weekend bootcamp, focused on Entrepreneurship.
-                  In here I had the chance to start learning about the business world and its structure, and at the same time, doing that exact process with an idea and a team.
-                  I've also learned the importance of marketing, financial and competition analysis.
-              </p>
-            </div>
-          </div>
-        <div class="containerUp right">
-          <div class="content w3-hover-black w3-hover-text-white">
-            <h3>2016 - ISEP</h3>
-            <p>My journey into the "real" world started here. I was undecided between acting/circus school or an engineering degree. 
-                I choose the engineering one and I didn't regret it. I can still do some of the other activities on my free time.
-                Electrical and Computer Engineering was my first choice since, in point of view, is the one that combines all modern engineering fields into one, giving me multiple tools 
-                to ultimately, build almost whatever I want.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <hr>
-
-    <!-- About Me -->
- <div class="w3-container" id="extra">
-    <div class="w3-panel w3-center w3-border w3-border-dark-grey subtitulo">
-       <h4><i class="fa fa-basketball-ball fa-fw"></i>
-        <i class="fa fa-theater-masks fa-fw"></i>
-        <i class="fa fa-hands-helping fa-fw"></i>
-        <i class="fa fa-trophy fa-fw w3-margin-right"></i>
-        <strong>Extra-Curricular Activities</strong></h4>
-       </div> </div>
-
-<!-- Acendium -->
-<div class="w3-row">
-    <div class="w3-col m6 w3-padding-large">
-        <h1 class="w3-center">Junior Company</h1>
-        <h5 class="w3-center">2021 - Now</h5>
-        <p class="w3-large"> On March 2021 I decided to join Ascendium Junior Consulting, a Junior Company based at ISEP (Instituto Superior de Engenharia do Porto).
-            I was immediately selected for the projects department for my experience and my passion about building new things.
-            Currently I'm leading a small team on the development of this company's website.
-        </p>
-      </div>
-    <div class="w3-col m6 w3-padding-large w3-hide-small w3-center">
-     <img src="./Img/ascendium.jpg" class="w3-round w3-image w3-opacity-min w3-hover-opacity-off" alt="Table Setting" width="60%">
-    </div>
-  </div>
-
- <!-- Voluntariado -->
- <div class="w3-row">
-    <div class="w3-col m6 w3-padding-large w3-padding-small w3-hide-small w3-center">
-     <img src="./Img/Voluntariado.JPG" class="w3-round w3-image w3-opacity-min w3-hover-opacity-off" alt="Table Setting" width="60%">
-    </div>
-
-    <div class="w3-col m6 w3-padding-large">
-      <h1 class="w3-center">Volunteering</h1>
-      <h5 class="w3-center">2016 - Now</h5>
-      <p class="w3-large">
-          Volunteering is one of the most fulfilling activities that I do.
-          The impact on the life of someone else and improving someone's life is worth more than money.
-          It is also a great place to make new friends and learning a lot of new things!
-          Currently I'm a student ambassador for ISEP, representing my faculty in many events.
-          I have also been a ESN Buddy, helping ERASMUS students in their adventure around Porto; Participated in Serralves em Festa and Festa de Outono as a guide;
-          Was also a school tutor for kids from bad social conditions and a summer camp monitor;
-          Recently I have also participated in a summer camp, proposed by <i>Just a Change</i>, where I had the chance to improve Mr. Faustino's life
-          by rebuilding his old and before uninhabitable home. 
-      </p>
-    </div>
-  </div>
-
-  <!-- Teatro -->
- <div class="w3-row">
-    <div class="w3-col m6 w3-padding-large">
-        <h1 class="w3-center">Theatre & Performance</h1>
-        <h5 class="w3-center">2016 - 2020</h5>
-        <p class="w3-large">
-            I'm huge cinema fan which catapulted me into the world of arts and performance.
-            In high school I had the opportunity the join the local acting group and after that I have participated in many more shows.
-            I've learned how to communicate, project my voice and that the stage is where I like to be though my favorite kind of theatre doesn't have a stage, it is street theatre.
-        </p>
-      </div>
-    <div class="w3-col m6 w3-padding-large w3-hide-small w3-center">
-     <img src="./Img/teatro.jpg" class="w3-round w3-image w3-opacity-min w3-hover-opacity-off w3-center" alt="Table Setting" width="60%">
-    </div>
-  </div>
-
- <!-- Basketball -->
- <div class="w3-row">
-    <div class="w3-col m6 w3-padding-large w3-hide-small w3-center">
-     <img src="./Img/basket.JPG" class="w3-round w3-image w3-opacity-min w3-hover-opacity-off" alt="Table Setting" width="60%">
-    </div>
-
-    <div class="w3-col m6 w3-padding-large">
-      <h1 class="w3-center">Basketball</h1>
-      <h5 class="w3-center">2012 - 2019</h5>
-      <p class="w3-large">
-          I had a very fast growth when I was a kid, and by consequence I was taller than anyone else in the class.
-          Since I was never good with football I decided to join a basketball team.
-          Due to some time conflicts between school and basketball, I had to change team until I started developing constant knee injuries and unfortunately quitted it.
-      </p>
-    </div>
-  </div>
-  
-  <hr>
-
-  <div class="w3-container" id="language">
-    <!-- Languages -->
-    <div class="w3-panel w3-center w3-border w3-border-dark-grey w3-row-padding subtitulo">
-    <h4><i class="fa fa-language fa-fw w3-margin-right"></i><strong>Languages Mastery</strong></h4>
-    </div>
-    <!-- Progress bars / Skills -->
-    <p>Portuguese </p>
-    <div class="w3-grey">
-      <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:100%">Native Language</div>
-    </div>
-    <p>English</p>
-    <div class="w3-grey">
-      <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:95%">Fluent Speaker</div>
-    </div>
-    <p>Spanish</p>
-    <div class="w3-grey">
-      <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:85%">Avid Speaker</div>
-    </div>
-    <p>French</p>
-    <div class="w3-grey">
-      <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:40%">Learner</div>
-    </div>
-    <p>Lithuanian</p>
-    <div class="w3-grey">
-      <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:30%">Basic Communication</div>
-    </div>
-</div>
-    <hr>
-
-
-    <!-- About Me -->
-  <div class="w3-container w3-white" id="about">
-    <div class="w3-panel w3-center w3-border w3-border-dark-grey subtitulo">
-      <h4><i class="fa fa-user fa-fw w3-margin-right"></i><strong>About Me</strong></h4>
-      </div>
-  
-   <!-- Images of Me -->
-   <div class="w3-row-padding"">
-      <div class="w3-col m6">
-        <img src="./Img/vilnius1.jpg" alt="Me" style="width:100%">
-      </div>
-      <div class="w3-col m6">
-        <img src="./Img/vilnius2_1.jpg" alt="Me" style="width:100%">
-      </div>
-  </div>
-  
-    <div class="w3-container">
-      <p>My name is Carlos Vieira and i'm an Electrical and Computer Engineering student, currently attending the Master Course of Autonomous Systems. I've got strong theoretical and practical knowledge and i'm in love with engineering.
-          Extremely motivated to work on creative and entrepreneurial projects. General programming, PCB design and microcontrollers are some of my strongest points. Good speaker for small and big audiences, allied with a leadership spirit!
-      </p>
-    </div>
-      <p class="w3-center">
-          <a href="./Docs/Curr_culo_Atual.pdf" download="CarlosVieiraCV.pdf">
-          <button class="w3-button w3-dark-grey">
-            <i class="fa fa-download w3-margin-right"></i>Download <i>Curriculum Vitae </i>
-          </button>
-      </a>
-          </p>
-        </p>
-   </div>
-    
-  
-  <!-- Contact Section -->
-  <div class="w3-container w3-padding-large w3-grey" id="contact">
-    <h4><b>Contact Me</b></h4>
-    <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
-      <div class="w3-quarter w3-black email">
-        <a href="mailto:car.vieira@outlook.pt?subject=Landing Page" target="_blank" class="email" style="text-decoration: none;">
-        <p><i class="fa fa-envelope w3-xxlarge w3-text-yellow"></i></p>
-        <p>car.vieira@outlook.pt</p>
-        </a>
-      </div>
-      <div class="w3-quarter w3-black email">
-        <a href="https://goo.gl/maps/iFwafr7TkV5ji5r78" target="_blank" class="email" style="text-decoration: none;">
-        <p><i class="fa fa-map-marker w3-xxlarge w3-text-red"></i></p>
-        <p>Porto, PT</p>
-      </a>
-      </div>
-      <div class="w3-quarter w3-black email">
-        <a href="tel:+351916593118" target="_blank" class="email" style="text-decoration: none;">
-        <p><i class="fa fa-phone w3-xxlarge w3-text-green"></i></p>
-        <p>(+351) 916593118</p>
-      </div>
-      <div class="w3-quarter w3-black email">
-        <a href="https://www.linkedin.com/in/carlosvieira99/" target="_blank" class="email" style="text-decoration: none;">
-        <p><i class="fa fa-linkedin-square w3-xxlarge w3-text-blue"></i></p>
-        <p>carlosvieira99</p>
-        </a>
-      </div>
-    </div>
-    <hr class="w3-opacity">
-
-
-    <!-- Formulario -->
-    <!--
-    <form action="/action_page.php" target="_self" autocomplete="on">
-      <div class="w3-section">
-        <div class="w3-row w3-section">
-            <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
-              <div class="w3-rest">
-                <input class="w3-input w3-border" type="text" name="Name" placeholder="Your name in here" required>
-              </div>
-          </div>
-      </div>
-
-      <div class="w3-section">
-        <div class="w3-row w3-section">
-            <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-envelope-o"></i></div>
-              <div class="w3-rest">
-                <input class="w3-input w3-border" type="email" name="Email" placeholder="Your email here"required>
-              </div>
-          </div>
-      </div>
-
-      <div class="w3-section">
-        <div class="w3-row w3-section">
-            <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-pencil"></i></div>
-              <div class="w3-rest">
-                <input class="w3-input w3-border" name="message" type="text" placeholder="Message">
-              </div>
-          </div>
-      </div>
-
-      <div class="w3-section w3-center">
-      <button type="submit" onsubmit="alert('Hello World!')" class="w3-button w3-black w3-margin-bottomr"><i class="fa fa-paper-plane w3-margin-right"></i>Send Message</button>
-    </div>
-    </form>
-  </div> -->
-  
-  <div class="w3-black w3-center w3-padding-24">© 2021 Carlos Silva - All Rights Reserved</div>
-
-<!-- End page content -->
-</body>
-</div>
-</html>
+  .container2 .content2 {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+  }
