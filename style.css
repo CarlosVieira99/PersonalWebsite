@@ -18,6 +18,10 @@ p {
   text-align: justify;
 }
 
+#img_soft{
+  width:70%;
+}
+
 .subtitulo:hover{
     color: white;
     background-color: black;
@@ -265,6 +269,14 @@ input:focus {
   
   /* Media queries - Responsive timeline on screens less than 600px wide */
   @media screen and (max-width: 600px) {
+    #video_intro{
+      width: 100%;
+    }
+
+    #img_soft{
+      width: 100%;
+    }
+
     /* Place the timelime to the left */
     .timeline::after {
     left: 31px;
