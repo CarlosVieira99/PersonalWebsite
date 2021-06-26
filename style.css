@@ -182,7 +182,6 @@ input:focus {
     background-color: inherit;
     width: 50%;
     margin-top: -10%;
-    display: block;
   }
   
   /* The circles on the timeline */
@@ -283,7 +282,8 @@ input:focus {
       width: 100%;
       padding-left: 70px;
       padding-right: 25px;
-      margin-top: 10px;
+      margin-top: 10%;
+      padding-top: 15%;
       }
     
     /* Make sure that all arrows are pointing leftwards */
