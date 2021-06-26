@@ -277,6 +277,13 @@ input:focus {
     padding-left: 70px;
     padding-right: 25px;
     }
+
+    /* Full-width containers */
+    .containerUp {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+      }
     
     /* Make sure that all arrows are pointing leftwards */
     .container::before {
@@ -285,6 +292,14 @@ input:focus {
     border-width: 10px 10px 10px 0;
     border-color: transparent white transparent transparent;
     }
+
+    /* Make sure that all arrows are pointing leftwards */
+    .containerUp::before {
+      left: 60px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+      }
   
     /* Make sure all circles are at the same spot */
     .left::after, .right::after {
