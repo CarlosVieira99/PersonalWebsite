@@ -22,6 +22,11 @@ p {
   width:70%;
 }
 
+.slideMeu{
+  width: 25%;
+  margin-inline: 4%;
+}
+
 .subtitulo:hover{
     color: white;
     background-color: black;
@@ -275,6 +280,11 @@ input:focus {
 
     #img_soft{
       width: 100%;
+    }
+
+    .slideMeu{
+      width: auto;
+    margin-inline: 0;
     }
 
     /* Place the timelime to the left */
