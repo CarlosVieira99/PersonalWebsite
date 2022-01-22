@@ -1,8 +1,8 @@
 * {box-sizing: border-box}
 body {font-family: Verdana; margin:0}
-.mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5, .mySlides6  {display: none}
+.mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5, .mySlides6, .mySlides7, .mySlides8, .mySlides9  {display: none}
 .mySlides1:first-child, .mySlides2:first-child, .mySlides3:first-child,
- .mySlides4:first-child, .mySlides5:first-child, .mySlides6:first-child{display: block}
+ .mySlides4:first-child, .mySlides5:first-child, .mySlides6:first-child, .mySlides7:first-child, .mySlides8:first-child, .mySlides9:first-child{display: block}
 img {vertical-align: middle;}
 
 /* Slideshow container */
