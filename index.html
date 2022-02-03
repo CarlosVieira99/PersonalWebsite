@@ -39,6 +39,13 @@
 <!-- Altium 365-->
 <!-- <script src="https://viewer.altium.com/client/static/js/embed.js"></script> -->
 
+<!-- Vpython -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="https://s3.amazonaws.com/glowscript/lib/jquery/2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://s3.amazonaws.com/glowscript/lib/jquery/2.1/jquery-ui.custom.min.js"></script>
+<script type="text/javascript" src="https://s3.amazonaws.com/glowscript/package/glow.2.9.min.js"></script>
+<script type="text/javascript" src="https://s3.amazonaws.com/glowscript/package/RSrun.2.9.min.js"></script>
+
 <script src="script.js" crossorigin="anonymous"></script>
 </head>
 <body class="w3-content w3-white" style="max-width:1600px">
@@ -137,10 +144,12 @@
     
         <div class="w3-row-padding" style="margin-top: 0%; padding-top: 0%;">
             <div class="w3-third w3-container w3-margin-bottom" style="margin-top: 0%; padding-top: 0%;">
-                <h5><i class="fa fa-code fa-fw w3-margin-right"></i><b>Apps & UI</b></h5>
-                <p style="text-align: justify;">In love with Python since I started programming it, it is so universal and flexible that you can do practically anything with it. 
-                This motivated me to learn more about UI (User Interface) with the help of QT Designer and also the development of 3D real-time simulations
-                using VTK (Visual ToolKit) and mathematical analysis with MatPlotLib and Numpy.</p>
+                <h5><i class="fa fa-code fa-fw w3-margin-right"></i><b>Apps, UI & AI</b></h5>
+                <p style="text-align: justify;">Python is so universal and flexible that you can do practically anything with it. 
+                This motivated me to learn more about UI with the help of QT Designer and TKinter, and also the development of 3D real-time simulations
+                using VTK and mathematical analysis with MatPlotLib and Numpy.
+                Recently I've been using it for AI applications using TensorFlow or PyTorch.
+              </p>
                 </div>
             <div class="w3-third w3-container w3-margin-bottom">
                 <h5><i class="fa fa-industry fa-fw w3-margin-right"></i><b>Industrial Automation</b></h5>
@@ -192,10 +201,379 @@
         </div>
     </div>
 
-    <h3 class="w3-center">Commonly used Software and Tools:</h3>
-    <div class="section w3-center">
+    <h3 class="w3-center">Tools and Frameworks Experience:</h3>
+    <!-- <div class="section w3-center">
         <img src="./Img/software.png" class="w3-center" id="img_soft" alt="Used Softwares Picture">
-    </div>
+    </div> !-->
+
+<div class="w3-center" id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"
+  style="border-bottom: solid 2px black"> Show all</button>
+  <button class="btn" onclick="filterSelection('Hardware')" style="border-bottom: solid 2px #6ac6c1;">Hardware Dev</button>
+  <!-- KiCad, Altium e Proteus -->
+  <button class="btn" onclick="filterSelection('Software')"
+  style="border-bottom: solid 2px #284B63;"> Software Dev</button>
+  <button class="btn" onclick="filterSelection('Robotics')"
+  style="border-bottom: solid 2px red;"> Robotics</button>
+   <button class="btn" onclick="filterSelection('OS')"
+   style="border-bottom: solid 2px #408557;"> OS</button>
+  <button class="btn" onclick="filterSelection('PointClouds')"
+  style="border-bottom: solid 2px #630e0e;"> Point Cloud Viz</button>
+  <button class="btn" onclick="filterSelection('Industrial')"
+  style="border-bottom: solid 2px green;"> Industrial</button>
+  <button class="btn" onclick="filterSelection('Management')"
+  style="border-bottom: solid 2px #EC9A29;"> Management</button>
+</div>
+
+<div class="w3-container w3-center w3-centered" style="margin-inline: 15%; margin-left: 18%; margin-bottom: 5%; text-align: center;">
+<!-- Hardware -->
+  
+  <div class="filterDiv Hardware parent w3-center w3-centered">
+      <figure>
+        <img src="https://hackaday.com/wp-content/uploads/2021/10/kicad-logo.png?w=600&h=600" style="height:80px">
+        <figcaption style="margin-top: -50%; margin-bottom:-62%;"><i style="border-top: 3px solid #6ac6c1;">KiCad</i></figcaption>
+      </figure>
+  </div>
+  
+  <div class="filterDiv Hardware parent">
+      <figure>
+        <img src="https://raw.githubusercontent.com/github/explore/7af95003139e68a3a54e382bb4f23a72836ef348/topics/altium-designer/altium-designer.png" style="width:80px">
+        <figcaption style="margin-top: -50%; margin-bottom:-62%"><i style="border-top: 3px solid #6ac6c1;">Altium</i></figcaption>
+      </figure>
+  </div>
+  
+  <div class="filterDiv Hardware parent">
+      <figure>
+        <img src="https://www.labcenter.com/images/logo.png" style="height:80px">
+        <figcaption style="margin-top: -35%; margin-bottom:-42%"><i style="border-top: 3px solid #6ac6c1;">Proteus</i></figcaption>
+      </figure>
+  </div>
+  
+  <div class="filterDiv Hardware parent">
+      <figure>
+        <img src="https://www.3dsl.com.au/wp-content/uploads/2018/06/Logo-for-Cura-1.png" style="height:80px">
+        <figcaption style="margin-top: -50%; margin-bottom:-59%"><i style="border-top: 3px solid #6ac6c1;">CURA</i></figcaption>
+      </figure>
+  </div>
+  
+  <div class="filterDiv Hardware parent">
+      <figure>
+        <img src="https://images-vod.wixmp.com/fa16dacc-04f4-4f6b-9c61-c2deac87b07b/images/97b9ab773bce476796cd75d112d82c7c~mv2/v1/fill/w_330,h_330/file.png" style="height:80px">
+        <figcaption style="margin-top: -50%; margin-bottom:-61%"><i style="border-top: 3px solid #6ac6c1;">Fusion 360</i></figcaption>
+      </figure>
+  </div>
+
+  <div class="filterDiv Hardware parent">
+    <figure>
+      <img src="https://downloadly.net/wp-content/uploads/2020/03/Quartus-Prime-.png" style="height:80px">
+      <figcaption style="margin-top: -50%; margin-bottom:-61%"><i style="border-top: 3px solid #6ac6c1;">Quartus</i></figcaption>
+    </figure>
+</div>
+
+	<!-- Software -->
+    <div class="filterDiv Software parent">
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1822px-ISO_C%2B%2B_Logo.svg.png" style="height:80px">
+        <figcaption style="margin-top: -55%; margin-bottom:-69%"><i style="border-top: 3px solid #284B63;">C/C++</i></figcaption>
+      </figure>
+  </div>
+
+  <div class="filterDiv Software parent">
+    <figure>
+      <img src="http://www.byteanalysis.com.br/assets/images/25a85d9e5057430d82273a3c75e73014.png" style="height:80px">
+      <figcaption style="margin-top: -48%; margin-bottom:-60%"><i style="border-top: 3px solid #284B63;">Assembly</i></figcaption>
+    </figure>
+</div>
+  
+  <div class="filterDiv Software parent">
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png" style="height:80px">
+        <figcaption style="margin-top: -50%; margin-bottom:-60%"><i style="border-top: 3px solid #284B63;">Python</i></figcaption>
+      </figure>
+  </div>
+  
+  <div class="filterDiv Software parent">
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/1200px-Jupyter_logo.svg.png" style="height:80px">
+        <figcaption style="margin-top: -58%; margin-bottom:-69%"><i style="border-top: 3px solid #284B63;">Jupyter</i></figcaption>
+      </figure>
+  </div>
+  
+  <div class="filterDiv Software parent">
+      <figure>
+        <img src="https://user-images.githubusercontent.com/98330/63813335-20cd4b80-c8e2-11e9-9c04-e4dbf7285aa1.png" style="height:80px">
+        <figcaption style="margin-top: -55%; margin-bottom:-62%"><i style="border-top: 3px solid #284B63;">Numpy</i></figcaption>
+      </figure>
+  </div>
+  
+  <div class="filterDiv Software parent">
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Created_with_Matplotlib-logo.svg/2048px-Created_with_Matplotlib-logo.svg.png" style="height:80px">
+        <figcaption style="margin-top: -50%; margin-bottom:-59%"><i style="border-top: 3px solid #284B63;">Matplotlib</i></figcaption>
+      </figure>
+  </div>
+  
+  <div class="filterDiv Software parent" style="text-align: center;">
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Visualization_Toolkit_logo.svg/1200px-Visualization_Toolkit_logo.svg.png" style="height:60px; margin-top:10%">
+        <figcaption style="margin-top: -37%; margin-bottom:-40%"><i style="border-top: 3px solid #284B63;">VTK</i></figcaption>
+      </figure>
+  </div>
+  
+  <div class="filterDiv Software parent" style="text-align: center;">
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Tensorflow_logo.svg/1200px-Tensorflow_logo.svg.png" style="height:80px">
+        <figcaption style="margin-top: -55%; margin-bottom:-60%; text-align:center"><i style="border-top: 3px solid #284B63;">TensorFlow</i></figcaption>
+      </figure>
+  </div>
+  
+  <div class="filterDiv Software parent" style="text-align: center;">
+      <figure>
+        <img src="https://img.stackshare.io/service/5601/keras.png" style="height:80px">
+        <figcaption style="margin-top: -52%; margin-bottom:-55%; text-align:center"><i style="border-top: 3px solid #284B63;">Keras</i></figcaption>
+      </figure>
+  </div>
+  
+  <div class="filterDiv Software parent">
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/PyTorch_logo_icon.svg/635px-PyTorch_logo_icon.svg.png" style="height:80px">
+        <figcaption style="margin-top: -62%; margin-bottom:-67%"><i style="border-top: 3px solid #284B63;">PyTorch</i></figcaption>
+      </figure>
+  </div>
+  
+  <div class="filterDiv Software parent">
+      <figure>
+        <img src="https://raytrix.de/wp-content/uploads/2019/08/thumb_nvidia-cuda.png" style="height:80px">
+        <figcaption style="margin-top: -60%; margin-bottom:-57%"><i style="border-top: 3px solid #284B63;">CUDA</i></figcaption>
+      </figure>
+  </div>
+  
+  <div class="filterDiv Software parent">
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Matlab_Logo.png/667px-Matlab_Logo.png" style="height:80px">
+        <figcaption style="margin-top: -50%; margin-bottom:-46%"><i style="border-top: 3px solid #284B63;">MATLAB</i></figcaption>
+      </figure>
+  </div>
+ 
+  <div class="filterDiv Software parent" style="text-align: center;">
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Gnu-octave-logo.svg/1024px-Gnu-octave-logo.svg.png" style="height:80px">
+        <figcaption style="margin-top: -55%; margin-bottom:-51%"><i style="border-top: 3px solid #284B63;">Octave</i></figcaption>
+      </figure>
+  </div>
+  
+  <div class="filterDiv Software parent">
+      <figure>
+        <img src="data:image/png;base64,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" style="height:80px">
+        <figcaption style="margin-top: -55%; margin-bottom:-51%"><i style="border-top: 3px solid #0F8B8D;">Scilab</i></figcaption>
+      </figure>
+  </div>
+  
+  <div class="filterDiv Software parent">
+      <figure>
+        <img src="https://logospng.org/download/html-5/logo-html-5-2048.png" style="height:80px">
+        <figcaption style="margin-top: -55%; margin-bottom:-51%"><i style="border-top: 3px solid #284B63;">HTML</i></figcaption>
+      </figure>
+  </div>
+  
+  <div class="filterDiv Software parent">
+      <figure>
+        <img src="https://logospng.org/download/css-3/logo-css-3-2048.png" style="height:80px">
+        <figcaption style="margin-top: -55%; margin-bottom:-51%"><i style="border-top: 3px solid #284B63;">CSS</i></figcaption>
+      </figure>
+  </div>
+  
+  <div class="filterDiv Software parent">
+      <figure>
+        <img src="https://cdn.worldvectorlogo.com/logos/javascript-1.svg" style="height:80px">
+        <figcaption style="margin-top: -63%; margin-bottom:-58%"><i style="border-top: 3px solid #284B63;">JavaScript</i></figcaption>
+      </figure>
+  </div>
+
+  <div class="filterDiv Software parent">
+    <figure>
+      <img src=" https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png" style="height:60px">
+      <figcaption style="margin-top: -40%; margin-bottom:-36%"><i style="border-top: 3px solid #284B63;">PHP</i></figcaption>
+    </figure>
+</div>
+
+<div class="filterDiv Software parent">
+  <figure>
+    <img src="https://desenvolvimentoaberto.files.wordpress.com/2016/11/logoazuresql.png" style="height:70px">
+    <figcaption style="margin-top: -65%; margin-bottom:-60%"><i style="border-top: 3px solid #284B63;">SQL</i></figcaption>
+  </figure>
+</div>
+  
+  <div class="filterDiv Software parent">
+      <figure>
+        <img src=" https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png" style="height:80px">
+        <figcaption style="margin-top: -55%; margin-bottom:-50%"><i style="border-top: 3px solid #284B63;">VS Code</i></figcaption>
+      </figure>
+  </div>
+  
+  <div class="filterDiv Software parent">
+      <figure>
+        <img src="https://www.it.unlv.edu/sites/default/files/styles/250_width/public/sites/default/files/assets/software/icons/atmel_studio.png?itok=Y_BrK5R2" style="height:80px">
+        <figcaption style="margin-top: -55%; margin-bottom:-50%"><i style="border-top: 3px solid #284B63;">AtmelStudio</i></figcaption>
+      </figure>
+  </div>
+  
+  <div class="filterDiv Software parent">
+      <figure>
+        <img src="https://www.disk91.com/wp-content/uploads/2020/06/stm32-cube-ide.png" style="height:60px">
+        <figcaption style="margin-top: -42%; margin-bottom:-39%"><i style="border-top: 3px solid #284B63;">Cube IDE</i></figcaption>
+      </figure>
+  </div>
+  
+  <div class="filterDiv Software parent">
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Arduino_Logo.svg/1280px-Arduino_Logo.svg.png" style="height:60px">
+        <figcaption style="margin-top: -50%; margin-bottom:-45%"><i style="border-top: 3px solid #284B63;">Arduino IDE</i></figcaption>
+      </figure>
+  </div>
+  
+  <!-- UI -->
+   <div class="filterDiv Software parent">
+      <figure>
+        <img src="https://cdn.shopify.com/s/files/1/0099/4220/4513/products/QtInstaller-896_550x825.png?v=1589183701" style="height:80px">
+        <figcaption style="margin-top: -55%; margin-bottom:-49%"><i style="border-top: 3px solid #284B63;">Qt</i></figcaption>
+      </figure>
+  </div>
+ 
+  <div class="filterDiv Software parent" style="text-align: center;">
+      <figure>
+        <img src="https://wingware.com/images/large-feather.png" style="height:80px">
+        <figcaption style="margin-top: -75%; margin-bottom:-69%"><i style="border-top: 3px solid #284B63;">TKinter</i></figcaption>
+      </figure>
+  </div>
+
+   <!-- Robotics -->
+   
+   <div class="filterDiv Robotics parent" style="text-align: center;">
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Robot_Operating_System_logo.svg/1200px-Robot_Operating_System_logo.svg.png" style="height:80px; margin-top:10%">
+      <figcaption style="margin-top: -50%; margin-bottom:-54%"><i style="border-top: 3px solid red;">ROS</i></figcaption>
+    </figure>
+</div>
+
+<div class="filterDiv Robotics parent" style="text-align: center;">
+    <figure>
+      <img src="data:image/png;base64,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" style="height:80px; margin-top:10%">
+      <figcaption style="margin-top: -60%; margin-bottom:-61%"><i style="border-top: 3px solid red;">Raspberry</i></figcaption>
+    </figure>
+</div>
+  
+  <!-- Operating Systems -->
+   <div class="filterDiv OS parent">
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Logo-ubuntu_cof-orange-hex.svg/1200px-Logo-ubuntu_cof-orange-hex.svg.png" style="height:80px">
+        <figcaption style="margin-top: -55%; margin-bottom:-49%"><i style="border-top: 3px solid #408557;">Ubuntu</i></figcaption>
+      </figure>
+  </div>
+ 
+  <div class="filterDiv OS parent" style="text-align: center;">
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Linux_Mint_logo_without_wordmark.svg/1200px-Linux_Mint_logo_without_wordmark.svg.png" style="height:80px">
+        <figcaption style="margin-top: -55%; margin-bottom:-49%"><i style="border-top: 3px solid #408557;">Linux Mint</i></figcaption>
+      </figure>
+  </div>
+  
+  <div class="filterDiv OS parent" style="text-align: center;">
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Fedora-logo.svg/2048px-Fedora-logo.svg.png" style="height:80px; margin-top:10%">
+        <figcaption style="margin-top: -55%; margin-bottom:-49%"><i style="border-top: 3px solid #408557;">Fedora</i></figcaption>
+      </figure>
+  </div>
+  
+  <div class="filterDiv OS parent" style="text-align: center;">
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Openlogo-debianV2.svg/1200px-Openlogo-debianV2.svg.png" style="height:80px; margin-top:10%">
+        <figcaption style="margin-top: -65%; margin-bottom:-63%"><i style="border-top: 3px solid #408557;">Debian</i></figcaption>
+      </figure>
+  </div>
+  
+  <!-- Point Clouds -->
+   <div class="filterDiv PointClouds parent w3-center w3-centered" style="text-align: center;">
+      <figure>
+        <img src="https://discourse.paraview.org/uploads/default/original/2X/8/8ca8a3bd08e322918d9c0958f548dec7d0e7cd8d.png" style="height:80px">
+        <figcaption style="margin-top: -52%; margin-bottom:-51%"><i style="border-top: 3px solid  #630e0e;">Paraview</i></figcaption>
+      </figure>
+  </div>
+ 
+  <div class="filterDiv PointClouds parent w3-center w3-centered" style="text-align: center;">
+      <figure>
+        <img src="https://www.meshlab.net/img/meshlabLogo.png" style="height:80px">
+        <figcaption style="margin-top: -52%; margin-bottom:-51%"><i style="border-top: 3px solid  #630e0e;">MeshLab</i></figcaption>
+      </figure>
+  </div>
+  
+   <!-- Industrial Automation -->
+   <div class="filterDiv Industrial parent" style="text-align: center;">
+    <figure>
+      <img src="https://play-lh.googleusercontent.com/podH2rtQOsOCbaeDbqZPFqNR1WYRG9fpgp-W2HrIEnGNcvrY4P0RA_EmXj2Wzm__bCs" style="height:70px; margin-top:10%">
+      <figcaption style="margin-top: -58%; margin-bottom:-59%"><i style="border-top: 3px solid green;">Ladder</i></figcaption>
+    </figure>
+</div>
+
+   <div class="filterDiv Industrial parent" style="text-align: center;">
+      <figure>
+        <img src="https://electronicdrives.com/home/wp-content/uploads/2015/10/step7.png" style="height:80px; margin-top:10%">
+        <figcaption style="margin-top: -31%; margin-bottom:-31%"><i style="border-top: 3px solid green;">Siemens Step 7</i></figcaption>
+      </figure>
+  </div>
+  
+  <div class="filterDiv Industrial parent" style="text-align: center;">
+      <figure>
+        <img src="https://seeklogo.com/images/S/somachine-basic-logo-3C58DC043D-seeklogo.com.png" style="height:80px; margin-top:10%">
+        <figcaption style="margin-top: -52%; margin-bottom:-52%"><i style="border-top: 3px solid green;">SoMachine</i></figcaption>
+      </figure>
+  </div>
+  
+  <!-- Management -->
+   <div class="filterDiv Management parent">
+      <figure>
+        <img src="https://www.scrum.org/themes/custom/scrumorg/assets/images/logo-250.png" style="height:80px">
+        <figcaption style="margin-top: -55%; margin-bottom:-48%"><i style="border-top: 3px solid #EC9A29;">Scrum</i></figcaption>
+      </figure>
+  </div>
+ 
+  <div class="filterDiv Management parent" style="text-align: center;">
+      <figure>
+        <img src="https://www.workrics.com/images/logo.png" style="height:80px">
+        <figcaption style="margin-top: -55%; margin-bottom:-48%"><i style="border-top: 3px solid #EC9A29;">Gantt</i></figcaption>
+      </figure>
+  </div>
+  
+   <div class="filterDiv Management parent" style="text-align: center;">
+      <figure>
+        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" style="height:80px">
+        <figcaption style="margin-top: -55%; margin-bottom:-49%"><i style="border-top: 3px solid #EC9A29;">GitHub</i></figcaption>
+      </figure>
+  </div>
+  
+  <div class="filterDiv Management parent" style="text-align: center;">
+      <figure>
+        <img src="https://images.ctfassets.net/nrgyaltdicpt/6qSXAo1CYEeBn5RkKLOR64/19c74bfb9a32772e353ff25c6f0070f5/ologo_square_colour_light_bg.png" style="height:80px">
+        <figcaption style="margin-top: -55%; margin-bottom:-50%"><i style="border-top: 3px solid #EC9A29;">OverLeaf</i></figcaption>
+      </figure>
+  </div>
+ 
+</div>
+<script>
+filterSelection("all")
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+
 
   </div>
     
@@ -607,7 +985,7 @@
      <a class="next" onclick="plusSlides(1, 3)">&#10095;</a>
      </div>
        <div class="w3-container w3-white w3-hover-black w3-hover-text-white">
-         <p><b>Automation of Oscillatory Movement Experiments</b></p>
+         <p><b>Automation of Oscillatory Movement Experiments (Hardware and UI)</b></p>
          <p>Bachelor project. Wi-Fi module with ultrasonic and temperature sensors, connected to the computer, presenting graphical data and results inside a graphical interface. Developed with C and Python.</p>
          <div class="w3-panel w3-large" style="text-align: left;">
              <a href="https://github.com/CarlosVieira99/Oscillatory-Movement-Analyzer" target="_blank"><i class="fa fa-github w3-hover-opacity"></i></a>
@@ -617,6 +995,160 @@
            </div>  
      </div>
      </div>
+
+
+     <div class="w3-third w3-container w3-margin-bottom slideMeu">
+      <!-- Slideshow container -->
+   <div class="slideshow-container">
+   <!-- Full-width images with number and caption text -->
+   <div class="mySlides80">
+     <!-- Vpython -->
+<div id="glowscript" class="glowscript w3-center">
+  <script type="text/javascript"><!--//--><![CDATA[//><!--
+  
+  // START JAVASCRIPT
+  ;(function() {;
+  var RS_modules = {};
+  RS_modules.pythonize = {};
+  
+  (function(){
+      function strings() {
+          var string_funcs, exclude, name;
+          string_funcs = set("capitalize strip lstrip rstrip islower isupper isspace lower upper swapcase center count endswith startswith find rfind index rindex format join ljust rjust partition rpartition replace split rsplit splitlines zfill".split(" "));
+          if (!arguments.length) {
+              exclude = (function(){
+                  var s = RS_set();
+                  s.jsset.add("split");
+                  s.jsset.add("replace");
+                  return s;
+              })();
+          } else if (arguments[0]) {
+              exclude = Array.prototype.slice.call(arguments);
+          } else {
+              exclude = null;
+          }
+          if (exclude) {
+              string_funcs = string_funcs.difference(set(exclude));
+          }
+          var RS_Iter0 = string_funcs;
+          RS_Iter0 = ((typeof RS_Iter0[Symbol.iterator] === "function") ? (RS_Iter0 instanceof Map ? RS_Iter0.keys() : RS_Iter0) : Object.keys(RS_Iter0));
+          for (var RS_Index0 of RS_Iter0) {
+              name = RS_Index0;
+              (RS_expr_temp = String.prototype)[(typeof name === "number" && name < 0) ? RS_expr_temp.length + name : name] = (RS_expr_temp = RS_str.prototype)[(typeof name === "number" && name < 0) ? RS_expr_temp.length + name : name];
+          }
+      };
+      if (!strings.__module__) Object.defineProperties(strings, {
+          __module__ : {value: "pythonize"}
+      });
+  
+      RS_modules.pythonize.strings = strings;
+  })();
+  async function __main__() {
+      var version, box, sphere, simple_sphere, cylinder, pyramid, cone, helix, ellipsoid, ring, arrow, compound, display, vector, print, arange, __name__, type, scene, RS_ls, MyScene, support_base, support_tall, support_ceil, spring, eq_pos, speed, endSpring, sonar_base, sonar_echo, sonar_trigger, labl, dist, dist_label, dt;
+      version = RS_list_decorate([ "2.9", "glowscript" ]);
+      Array.prototype['+']=function(r) {return this.concat(r)}
+      Array.prototype['*']=function(r) {return __array_times_number(this, r)}
+      window.__GSlang = "vpython";
+      box = vp_box;
+      sphere = vp_sphere;
+      simple_sphere = vp_simple_sphere;
+      cylinder = vp_cylinder;
+      pyramid = vp_pyramid;
+      cone = vp_cone;
+      helix = vp_helix;
+      ellipsoid = vp_ellipsoid;
+      ring = vp_ring;
+      arrow = vp_arrow;
+      compound = vp_compound;
+      display = canvas;
+      vector = vec;
+      print = GSprint;
+      arange = range;
+      __name__ = "__main__";
+      type = pytype;
+      scene = canvas();
+      var strings = RS_modules.pythonize.strings;
+  
+      strings();
+      "5";
+      MyScene = RS_interpolate_kwargs.call(this, display, [RS_desugar_kwargs({title: "(use scrool to zoom and right-mouse click to rotate)"})]);
+      "6";
+      MyScene.width = 300;
+      "7";
+      MyScene.height = 375;
+      "10";
+      MyScene.camera.pos = vector(1.56, 1.56, 1.8);
+      "11";
+    MyScene.camera.axis = vector(2.6["-u"](), 2.3["-u"](), 3["-u"]());
+      "15";
+      support_base = RS_interpolate_kwargs.call(this, box, [RS_desugar_kwargs({pos: vector(0, 1["-u"](), 0), size: vector(1, .1, 1), texture: textures.wood})]);
+      "19";
+      support_tall = RS_interpolate_kwargs.call(this, box, [RS_desugar_kwargs({pos: vector(support_base.pos.x, 1.5["+"](support_base.pos.y)["-"](support_base.size.y["/"](2)), support_base.pos.z["-"](support_base.size.z["/"](2))["-"](support_base.size.y["/"](2))), size: vector(1, 3, .1), texture: textures.wood})]);
+      "23";
+      support_ceil = RS_interpolate_kwargs.call(this, box, [RS_desugar_kwargs({pos: vector(support_base.pos.x, support_tall.size.y["+"](support_base.pos.y), support_base.pos.z["-"](support_tall.size.z)), size: vector(1, .1, 1), texture: textures.wood})]);
+      "26";
+      spring = RS_interpolate_kwargs.call(this, helix, [RS_desugar_kwargs({pos: vector(support_ceil.pos.x, support_ceil.pos.y, support_ceil.pos.z), axis: vector(0, 1["-u"](), 0), size: vector(1, .3, .3), coils: 8, thickness: .01, stiffness: 1, texture: textures.metal})]);
+      "29";
+      eq_pos = spring.pos["+"](spring.axis);
+      "31";
+      speed = .2;
+      "33";
+      endSpring = RS_interpolate_kwargs.call(this, box, [RS_desugar_kwargs({pos: eq_pos, color: color.yellow, size: vector(.75, .01, .5), mass: 1, velocity: vector(0, speed, 0), force: vector(0, 0, 0), make_trail: true, retain: 10, trail_color: color.green, opacity: .5})]);
+      "41";
+      sonar_base = RS_interpolate_kwargs.call(this, box, [RS_desugar_kwargs({pos: vector(support_base.pos.x, support_base.pos.y["+"](support_base.size.y), support_base.pos.z["-"](.1)), size: vector(.75, .1, .5), color: color.blue})]);
+      "43";
+      sonar_echo = RS_interpolate_kwargs.call(this, cylinder, [RS_desugar_kwargs({color: color.green, pos: vector(sonar_base.pos.x["-"](.15), sonar_base.pos.y, sonar_base.pos.z), radius: .1, length: .25, axis: vector(0, 1, 0)})]);
+      "45";
+      sonar_trigger = RS_interpolate_kwargs.call(this, cylinder, [RS_desugar_kwargs({color: color.green, pos: vector(sonar_base.pos.x["+"](.15), sonar_base.pos.y, sonar_base.pos.z), radius: .1, length: .25, axis: vector(0, 1, 0)})]);
+      "47";
+    
+      "49";
+      dist = endSpring.pos.y["-"](sonar_base.pos.y);
+      "51";
+      dist_label = RS_interpolate_kwargs.call(this, label, [RS_desugar_kwargs({pos: vector(1, .5, 0), text: "Distance = "})]);
+      "60";
+      dt = .01;
+      "62";
+      while (true) {
+          "63";
+          ;(await rate(1e3));
+          "64";
+          endSpring.force = spring.stiffness["-u"]()["*"](endSpring.pos["-"](eq_pos));
+          "65";
+          endSpring.velocity = endSpring.velocity["+"](endSpring.force["/"](endSpring.mass)["*"](dt));
+          "66";
+          endSpring.pos = endSpring.pos["+"](endSpring.velocity["*"](dt));
+          "67";
+          spring.axis = endSpring.pos["-"](spring.pos);
+          "68";
+          dist = endSpring.pos.y["-"](sonar_base.pos.y);
+          "69";
+          dist_label.text = "Distance = "["+"]("{0:.2f}".format(dist));
+      }
+  };
+  if (!__main__.__module__) Object.defineProperties(__main__, {
+      __module__ : {value: null}
+  });
+  
+  ;$(function(){ window.__context = { glowscript_container: $("#glowscript").removeAttr("id") }; __main__() })})()
+  // END JAVASCRIPT
+  
+  //--><!]]></script>
+  </div>
+   </div>
+ 
+   </div>
+     <div class="w3-container w3-white w3-hover-black w3-hover-text-white">
+       <p><b>Automation of Oscillatory Movement Experiments (Simulation)</b></p>
+       <p>Bachelor project. Wi-Fi module with ultrasonic and temperature sensors, connected to the computer, presenting graphical data and results inside a graphical interface. Developed with C and Python.</p>
+       <div class="w3-panel w3-large" style="text-align: left;">
+           <a href="https://github.com/CarlosVieira99/Oscillatory-Movement-Analyzer" target="_blank"><i class="fa fa-github w3-hover-opacity"></i></a>
+           <div class="w3-right" style="display: inline;">
+              Dec 2019
+          </div>
+         </div>  
+   </div>
+   </div>
 
 
 
@@ -741,7 +1273,7 @@
     <h1 class="w3-center">Robotics Teacher</h1>
     <h5 class="w3-center">2021 - Now</h5>
     <p class="w3-large">
-        It feels great to share your passion with others right? For this reason I decided to join Academia de Robótica, sto that I can teach kids and teenagers about robotics, electronics and programming.
+        It feels great to share your passion with others right? For this reason I decided to join Academia de Robótica, so that I can teach kids and teenagers about robotics, electronics and programming.
         This has also allowed to me to improve my communication skills with non-engineers, which will help me to comunicate about technology with other people.
     </p>
   </div>
@@ -867,7 +1399,7 @@
   </div>
   
     <div class="w3-container">
-      <p>My name is Carlos Vieira and i'm an Electrical and Computer Engineering student, currently attending the Master Course of Autonomous Systems. I've got strong theoretical and practical knowledge and i'm in love with engineering.
+      <p>My name is Carlos Vieira and I'm an Electrical and Computer Engineering student, currently attending the Master Course of Autonomous Systems. I've got strong theoretical and practical knowledge and i'm in love with engineering.
           Extremely motivated to work on creative and entrepreneurial projects. General programming, PCB design and microcontrollers are some of my strongest points. Good speaker for small and big audiences, allied with a leadership spirit!
       </p>
     </div>
